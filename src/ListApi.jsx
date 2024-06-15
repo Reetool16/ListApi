@@ -7,7 +7,6 @@ const ListApi = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [avatar, setAvatar] = useState("");
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -29,7 +28,8 @@ const ListApi = () => {
       email,
     };
 
-    // Post new user data to the API
+    console.log(newUser);
+
     axios
       .post("https://reqres.in/api/users", newUser)
       .then((response) => {
